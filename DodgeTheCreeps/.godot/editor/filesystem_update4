@@ -1,8 +1,5 @@
+res://Main.tscn
 res://Player.tscn
 res://Mob.tscn
 res://Hud.tscn
-res://Main.tscn
-res://Mob.gd
-res://HUD.gd
-res://Node.gd
 res://Main.gd
