@@ -3,6 +3,11 @@ extends Node
 
 func _ready():
 	$UserInterface/Retry.hide()
+	
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
+		# Restart current scene
+		get_tree().reload_current_scene()
 
 
 func _on_mob_timer_timeout():
@@ -29,7 +34,3 @@ func _on_player_hit():
 	$MobTimer.stop()
 	$UserInterface/Retry.show()
 	
-func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
-		# Restart current scene
-		get_tree().reload_current_scene()
