@@ -12,20 +12,20 @@ size = Vector2(774.745, 20)
 position = Vector2(571, 301)
 
 [node name="Ball" parent="." instance=ExtResource("2_788pr")]
-position = Vector2(402, 281)
+position = Vector2(46, 298)
 
 [node name="TopBar" type="Area2D" parent="."]
 position = Vector2(4, 0)
 
 [node name="TopBarCollision" type="CollisionShape2D" parent="TopBar"]
-position = Vector2(403, -3)
+position = Vector2(396, -4)
 shape = SubResource("RectangleShape2D_rigqh")
 
 [node name="BottomBar" type="Area2D" parent="."]
 position = Vector2(5, 612)
 
 [node name="BottomBarCollision" type="CollisionShape2D" parent="BottomBar"]
-position = Vector2(403, -3)
+position = Vector2(391, -4)
 shape = SubResource("RectangleShape2D_rigqh")
 
 [node name="LeftBar" type="Area2D" parent="."]
@@ -33,7 +33,7 @@ position = Vector2(-139, 542)
 rotation = -1.57117
 
 [node name="LeftBarCollision" type="CollisionShape2D" parent="LeftBar"]
-position = Vector2(278.947, 142.105)
+position = Vector2(278.951, 130.104)
 shape = SubResource("RectangleShape2D_rigqh")
 
 [node name="RightBar" type="Area2D" parent="."]
