@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7jbdrbw8ke5l"]
+
+[ext_resource type="PackedScene" uid="uid://c825i4wmputi3" path="res://Player.tscn" id="1_p85c1"]
+[ext_resource type="PackedScene" uid="uid://b8d6kkbjvxyu0" path="res://Ball.tscn" id="2_788pr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rigqh"]
+size = Vector2(774.745, 20)
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_p85c1")]
+position = Vector2(571, 301)
+
+[node name="Ball" parent="." instance=ExtResource("2_788pr")]
+position = Vector2(402, 281)
+
+[node name="TopBar" type="Area2D" parent="."]
+position = Vector2(4, 0)
+
+[node name="TopBarCollision" type="CollisionShape2D" parent="TopBar"]
+position = Vector2(403, -3)
+shape = SubResource("RectangleShape2D_rigqh")
+
+[node name="BottomBar" type="Area2D" parent="."]
+position = Vector2(5, 612)
+
+[node name="BottomBarCollision" type="CollisionShape2D" parent="BottomBar"]
+position = Vector2(403, -3)
+shape = SubResource("RectangleShape2D_rigqh")
+
+[node name="LeftBar" type="Area2D" parent="."]
+position = Vector2(-139, 542)
+rotation = -1.57117
+
+[node name="LeftBarCollision" type="CollisionShape2D" parent="LeftBar"]
+position = Vector2(278.947, 142.105)
+shape = SubResource("RectangleShape2D_rigqh")
+
+[node name="RightBar" type="Area2D" parent="."]
+position = Vector2(669, 553)
+rotation = -1.57117
+
+[node name="RightBarCollision" type="CollisionShape2D" parent="RightBar"]
+position = Vector2(278.947, 142.105)
+shape = SubResource("RectangleShape2D_rigqh")
+
+[connection signal="area_entered" from="TopBar" to="Ball" method="top_bar_entered"]
+[connection signal="area_entered" from="BottomBar" to="Ball" method="bottom_bar_entered"]
+[connection signal="area_entered" from="LeftBar" to="Ball" method="left_bar_entered"]
+[connection signal="area_entered" from="RightBar" to="Ball" method="right_bar_entered"]
