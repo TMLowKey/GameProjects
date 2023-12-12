@@ -11,16 +11,16 @@ func _ready():
 	set_position(Vector2(300,200))
 	#set_rotation_degrees(randf_range(0,360))
 	screen_size = get_viewport_rect().size
-	print(screen_size)
-	print(screen_size.x)
-	print(position)
+	#print(screen_size)
+	#print(screen_size.x)
+	#print(position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position += velocity * delta
 	
-	print(velocity)
-	print(position)
+	#print(velocity)
+	#print(position)
 	
 
 func bottom_bar_entered(area):
@@ -36,3 +36,11 @@ func left_bar_entered(area):
 func right_bar_entered(area):
 	velocity.x = velocity.x * -1
 	print("Bar")
+
+
+func _on_player_area_entered(area):
+	velocity.x = velocity.x * -1
+
+
+func _on_player_2_area_entered(area):
+	velocity.x = velocity.x * -1

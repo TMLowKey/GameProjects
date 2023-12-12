@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c825i4wmputi3"]
+[gd_scene load_steps=4 format=3 uid="uid://byiexn4kcsvip"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_17tp0"]
-[ext_resource type="Texture2D" uid="uid://ca38osh8jdryy" path="res://Art/Player.png" id="1_agq7v"]
+[ext_resource type="Script" path="res://Player.gd" id="1_0pes2"]
+[ext_resource type="Texture2D" uid="uid://ca38osh8jdryy" path="res://Art/Player.png" id="2_gvsj7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wv4b0"]
 size = Vector2(126, 12.0004)
 
 [node name="Player" type="Area2D"]
 rotation = 1.5708
-script = ExtResource("1_17tp0")
+script = ExtResource("1_0pes2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_agq7v")
+texture = ExtResource("2_gvsj7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5.52743e-06, -1.00003)

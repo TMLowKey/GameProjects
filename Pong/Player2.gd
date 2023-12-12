@@ -10,10 +10,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("p2_move_up"):
 		velocity.y -= 1
 		#print("Up")
-	if Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("p2_move_down"):
 		velocity.y += 1
 		#print("Down")
 	
