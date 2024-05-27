@@ -20,3 +20,10 @@ fn main() {
         .add_systems(Update, (exit_game, handle_game_over))
         .run();
 }
+
+#[derive(States, Debug, Clone, Copy, Eq, PartialEq, Hash, Default)]
+pub enum AppState {
+    MainMenu,
+    Game,
+    GameOver,
+}
