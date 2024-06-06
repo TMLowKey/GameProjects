@@ -2,6 +2,14 @@ use bevy::prelude::*;
 
 use crate::game::SimulationState;
 
+pub fn pause_simulation(mut simulations_state_next_state: ResMut<NextState<SimulationState>>) {
+    simulations_state_next_state.set(SimulationState::Paused);
+}
+
+pub fn resume_simulation(mut simulations_state_next_state: ResMut<NextState<SimulationState>>) {
+    simulations_state_next_state.set(SimulationState::Running);
+}
+
 pub fn toggle_simulation(
     mut commands: Commands,
     keyboard_input: Res<ButtonInput<KeyCode>>,
